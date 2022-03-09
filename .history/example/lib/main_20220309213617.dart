@@ -1,6 +1,6 @@
-import 'package:example/media_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:media_picker_widget/media_picker_widget.dart';
+import 'package:witit_mobile_app/package_test/media_picker.dart';
 
 void main() {
   runApp(const MyApp());

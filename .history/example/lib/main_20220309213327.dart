@@ -1,4 +1,3 @@
-import 'package:example/media_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:media_picker_widget/media_picker_widget.dart';
 
@@ -7,7 +6,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({Key key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -45,14 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: previewList(),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
-        onPressed: () {
-          // openImagePicker(context);
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => MediaPickerScreen(),
-              ));
-        },
+        onPressed: () => openImagePicker(context),
       ),
     );
   }
@@ -71,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 80,
                     width: 80,
                     child: Image.memory(
-                      mediaList[index].thumbnail!,
+                      mediaList[index].thumbnail,
                       fit: BoxFit.cover,
                     ),
                   ),
