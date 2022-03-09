@@ -7,7 +7,6 @@
 .atom/
 .buildlog/
 .history
-.history/
 .svn/
 
 # IntelliJ related
